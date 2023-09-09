@@ -37,10 +37,12 @@ use Drupal\Core\Entity\ContentEntityInterface;
  *   },
  *  links = {
  *     "canonical" = "/city/{city}",
+ *     "add-form" = "/city/{city}/add",
  *     "edit-form" = "/city/{city}/edit",
  *     "delete-form" = "/city/{city}/delete",
  *     "collection" = "/city/list"
  *   },
+ * field_ui_base_route = "assesment.city_settings",
  * )
  */
 

@@ -24,7 +24,7 @@ class CityDeleteForm extends ContentEntityConfirmFormBase {
   /**
    * {@inheritdoc}
    *
-   * If the delete command is canceled, return to the contact list.
+   * If the delete command is canceled, return to the city list.
    */
   public function getCancelURL() {
     return new Url('entity.city.collection');

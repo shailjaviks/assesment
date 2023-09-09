@@ -2,7 +2,7 @@
 entity.city.canonical:
   path: '/city/{city}'
   defaults:
-  # Calls the view controller, defined in the annotation of the contact entity
+  # Calls the view controller, defined in the annotation of the city entity
     _entity_view: 'city'
     _title: 'City entity'
   requirements:
@@ -12,7 +12,7 @@ entity.city.canonical:
 entity.city.collection:
   path: '/city/list'
   defaults:
-  # Calls the list controller, defined in the annotation of the contact entity.
+  # Calls the list controller, defined in the annotation of the city entity.
     _entity_list: 'city'
     _title: 'city List'
   requirements:
@@ -22,7 +22,7 @@ entity.city.collection:
 entity.manage_city.add_form:
   path: '/city/add'
   defaults:
-  # Calls the form.add controller, defined in the contact entity.
+  # Calls the form.add controller, defined in the city entity.
     _entity_form: city.add
     _title: 'Add city'
   requirements:
@@ -40,8 +40,16 @@ entity.city.edit_form:
 entity.city.delete_form:
   path: '/city/{city}/delete'
   defaults:
-    # Calls the form.delete controller, defined in the contact entity.
+    # Calls the form.delete controller, defined in the city entity.
     _entity_form: city.delete
     _title: 'Delete city'
   requirements:
     _entity_access: 'city.delete'
+
+city.cityt_settings:
+  path: 'admin/structure/assesment_city_settings'
+  defaults:
+    _form: '\Drupal\assesment\Form\CitySettingsForm'
+    _title: 'City Settings'
+  requirements:
+    _permission: 'administer city entity'       

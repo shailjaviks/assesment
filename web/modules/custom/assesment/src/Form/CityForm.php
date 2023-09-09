@@ -8,9 +8,9 @@ use Drupal\Core\Language\Language;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for the manage_inventory entity edit forms.
+ * Form controller for the assesment entity edit forms.
  *
- * @ingroup manage_inventory
+ * @ingroup assesment
  */
 class CityForm extends ContentEntityForm {
 
@@ -18,7 +18,7 @@ class CityForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\manage_inventory\Entity\Inventory */
+    /* @var $entity \Drupal\assesment\Entity\city */
     $form = parent::buildForm($form, $form_state);
     $entity = $this->entity;
 

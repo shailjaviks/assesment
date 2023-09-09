@@ -22,7 +22,6 @@ class CityListBuilder extends EntityListBuilder {
   public function render() {
     $build['description'] = array(
       '#markup' => $this->t('List for city entity'),
-      )),
     );
     $build['table'] = parent::render();
     return $build;
