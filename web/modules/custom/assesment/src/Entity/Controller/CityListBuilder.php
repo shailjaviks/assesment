@@ -12,20 +12,7 @@ use Drupal\Core\Url;
  */
 class CityListBuilder extends EntityListBuilder {
 
-  /**
-   * {@inheritdoc}
-   *
-   * We override ::render() so that we can add our own content above the table.
-   * parent::render() is where EntityListBuilder creates the table using our
-   * buildHeader() and buildRow() implementations.
-   */
-  public function render() {
-    $build['description'] = array(
-      '#markup' => $this->t('List for city entity'),
-    );
-    $build['table'] = parent::render();
-    return $build;
-  }
+  
 
   /**
    * {@inheritdoc}

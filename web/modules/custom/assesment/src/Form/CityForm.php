@@ -25,22 +25,22 @@ class CityForm extends ContentEntityForm {
     $form['title'] = array(
       '#title' => $this->t('Title'),
       '#type' => 'textfield',
-      '#default_value' => $entity->title,
+      '#default_value' => $entity->title->value,
     );
     $form['loc'] = array(
         '#title' => $this->t('Loc'),
-        '#type' => 'geolocation_map',
-        '#default_value' => $entity->loc,
+        '#type' => 'textfield',
+        '#default_value' => $entity->loc->value,
       );
       $form['pop'] = array(
         '#title' => $this->t('pop'),
         '#type' => 'textfield',
-        '#default_value' => $entity->pop,
+        '#default_value' => $entity->pop->value,
       );
       $form['state'] = array(
         '#title' => $this->t('state'),
         '#type' => 'textfield',
-        '#default_value' => $entity->state,
+        '#default_value' => $entity->state->value,
       );
     return $form;
   }
