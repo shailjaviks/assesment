@@ -1,0 +1,45 @@
+id: assesment_city
+label: 'Cities migration'
+dependencies:
+  enforced:
+    module:
+      - assesment
+migration_tags:
+  - City migration
+migration_group: default
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: ['modules/custom/assesment/cities.json']
+  item_selector: /
+  fields:
+    - name: id
+      label: 'Unique ID'
+      selector: id
+    - name: title
+      label: 'Title'
+      selector: city
+    - name: loc
+      label: 'Location'
+      selector: loc
+    - name: pop
+      label: 'Pop'
+      selector: pop
+    - name: state
+      label: 'State'
+      selector: pop  
+  ids:
+    id:
+      type: integer
+process:
+  title: title
+  # Note that 3 users are created by hook_install and removed by hook_uninstall.
+  # When no user is found, assign 1 to uid which corresponds to the admin user.
+  
+  loc: loc
+  pop: pop
+  state: state
+destination:
+  plugin: 'entity:city'
+  default_bundle: city
