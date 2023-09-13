@@ -16,7 +16,7 @@ source:
   fields:
     - name: id
       label: 'Unique ID'
-      selector: id
+      selector: _id
     - name: title
       label: 'Title'
       selector: city
@@ -33,9 +33,12 @@ source:
     id:
       type: integer
 process:
-  title: title
-  # Note that 3 users are created by hook_install and removed by hook_uninstall.
-  # When no user is found, assign 1 to uid which corresponds to the admin user.
+  # Need to use this patch to enable configuration_value plugin.
+  # https://www.drupal.org/files/issues/2020-03-02/3117216-10.configuration-value-process-plugin.patch
+  title: 
+    plugin: configuration_value
+    name: city.settings
+    key: city_mapping
   
   loc: loc
   pop: pop

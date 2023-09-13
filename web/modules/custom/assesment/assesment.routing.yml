@@ -52,4 +52,13 @@ city.cityt_settings:
     _form: '\Drupal\assesment\Form\CitySettingsForm'
     _title: 'City Settings'
   requirements:
-    _permission: 'administer city entity'       
+    _permission: 'administer city entity'
+city.settings_form:
+  path: '/admin/config/city/settings'
+  defaults:
+    _form: '\Drupal\city\Form\SettingsForm'
+    _title: 'SettingsForm'
+  requirements:
+    _permission: 'administer city entity'  
+  options:
+    _admin_route: TRUE           
